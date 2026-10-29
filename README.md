@@ -16,12 +16,10 @@ Prepare features. Duration is log-transformed because a few extremely long track
 Choose k. The notebook plots inertia for k = 2 to 15 (elbow plot), then compares k = 7 and k = 8 by cluster sizes and average feature values. k = 8 was chosen.
 Fit k-means with k = 8 (Euclidean distance).
 Describe the clusters. For each cluster, the notebook prints the top genres and the two songs closest to the cluster center, then builds a summary table of average feature values with a descriptive label per cluster.
-Features used for clustering
 
-danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, and duration (log-transformed).
+Features used for clustering: danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, and duration (log-transformed).
 
 Columns left out of the clustering:
-
 popularity: measures listener behavior, not sound.
 key and time_signature: categorical codes that Euclidean distance would treat as quantities.
 mode and explicit: included at first, but they split nearly identical sound profiles into separate clusters, so they were removed.
